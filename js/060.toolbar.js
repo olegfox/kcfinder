@@ -154,6 +154,9 @@ _.uploadFile = function(form) {
         setTimeout(function() {
             $('#uploadResponse').detach();
         }, 1);
+        setTimeout(function(){
+            _.returnFiles($('.file.selected').get());
+        }, 500);
         _.initUploadButton();
     });
 };
